@@ -1,4 +1,5 @@
-﻿using Example.Shared.Events;
+﻿using Example.Shared;
+using Example.Shared.Events;
 using Example.Shared.Messages;
 using Example.Stock.API.Entities;
 using Example.Stock.API.Services;
@@ -10,9 +11,13 @@ namespace Example.Stock.API.Consumers
     public class OrderCreatedEventConsumer : IConsumer<OrderCreatedEvent>
     {
         IMongoCollection<Entities.Stock> _stockCollection;
-        public OrderCreatedEventConsumer(MongoDBService mongoDbService)
+        readonly ISendEndpointProvider _sendEndpointProvider;
+        readonly IPublishEndpoint _publishEndpoint;
+        public OrderCreatedEventConsumer(MongoDBService mongoDbService, ISendEndpointProvider sendEndpointProvider, IPublishEndpoint publishEndpoint)
         {
             _stockCollection = mongoDbService.GetCollection<Entities.Stock>();
+            _sendEndpointProvider = sendEndpointProvider;
+            _publishEndpoint = publishEndpoint;
         }
 
         public async Task Consume(ConsumeContext<OrderCreatedEvent> context)
@@ -32,14 +37,31 @@ namespace Example.Stock.API.Consumers
                     await _stockCollection.FindOneAndReplaceAsync(s => s.ProductId == orderItem.ProductId, stock);
                 }
 
-                //Payment
+                StockReservedEvent stockReservedEvent = new()
+                {
+                    BuyerId = context.Message.BuyerId,
+                    OrderId = context.Message.OrderId,
+                    TotalPrice = context.Message.TotalPrice
+                };
+
+                ISendEndpoint sendEndpoint = await _sendEndpointProvider.GetSendEndpoint(new Uri($"queue:{RabbitMQSettings.Payment_StockReservedEventQueue}"));
+                await sendEndpoint.Send(stockReservedEvent);
+
+                Console.WriteLine("Stok işlemleri başarılı");
             }
             else
             {
-                
-            }
+                StockNotReservedEvent stockNotReservedEvent = new()
+                {
+                    OrderId = context.Message.OrderId,
+                    BuyerId = context.Message.BuyerId,
+                    Message = "Stokta yeterli ürün yok!"
+                };
 
-            Console.WriteLine(context.Message.OrderId + " - " +  context.Message.BuyerId);
+                await _publishEndpoint.Publish(stockNotReservedEvent);
+
+                Console.WriteLine("Stok işlemleri başarısız");
+            }
         }
     }
 }

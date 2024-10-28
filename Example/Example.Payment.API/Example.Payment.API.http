@@ -1,0 +1,6 @@
+@Example.Payment.API_HostAddress = http://localhost:5015
+
+GET {{Example.Payment.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

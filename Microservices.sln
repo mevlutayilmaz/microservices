@@ -21,6 +21,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSynchronization.APIBase
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSynchronization.APIBased.ServiceB", "DataSynchronization\APIBased\DataSynchronization.APIBased.ServiceB\DataSynchronization.APIBased.ServiceB.csproj", "{0232EFAF-8BA5-4EAE-B8DE-55BEC0EAB240}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBased", "EventBased", "{49E3F267-F4D7-4C94-8A8F-147AFBAAC382}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSynchronization.EventBased.ServiceA", "DataSynchronization\EventBased\DataSynchronization.EventBased.ServiceA\DataSynchronization.EventBased.ServiceA.csproj", "{AB32F2DB-D3DF-47DA-8300-0D356E0AF436}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSynchronization.EventBased.ServiceB", "DataSynchronization\EventBased\DataSynchronization.EventBased.ServiceB\DataSynchronization.EventBased.ServiceB.csproj", "{B5D870EB-A2D8-4B3E-BD7C-4E873991D9FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSynchronization.EventBased.Shared", "DataSynchronization\EventBased\DataSynchronization.EventBased.Shared\DataSynchronization.EventBased.Shared.csproj", "{F1008B5B-0DB3-4DC5-9ECD-996A99C74309}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +59,18 @@ Global
 		{0232EFAF-8BA5-4EAE-B8DE-55BEC0EAB240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0232EFAF-8BA5-4EAE-B8DE-55BEC0EAB240}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0232EFAF-8BA5-4EAE-B8DE-55BEC0EAB240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB32F2DB-D3DF-47DA-8300-0D356E0AF436}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB32F2DB-D3DF-47DA-8300-0D356E0AF436}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB32F2DB-D3DF-47DA-8300-0D356E0AF436}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB32F2DB-D3DF-47DA-8300-0D356E0AF436}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D870EB-A2D8-4B3E-BD7C-4E873991D9FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D870EB-A2D8-4B3E-BD7C-4E873991D9FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D870EB-A2D8-4B3E-BD7C-4E873991D9FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D870EB-A2D8-4B3E-BD7C-4E873991D9FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1008B5B-0DB3-4DC5-9ECD-996A99C74309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1008B5B-0DB3-4DC5-9ECD-996A99C74309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1008B5B-0DB3-4DC5-9ECD-996A99C74309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1008B5B-0DB3-4DC5-9ECD-996A99C74309}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +83,10 @@ Global
 		{5E607A32-D551-44C0-8999-1FFC76DAE991} = {1EACF63D-B45A-478A-8962-DFEE523F0FE4}
 		{B0F9C2AA-6EC4-4E2C-8E2D-C4441F61AB2B} = {5E607A32-D551-44C0-8999-1FFC76DAE991}
 		{0232EFAF-8BA5-4EAE-B8DE-55BEC0EAB240} = {5E607A32-D551-44C0-8999-1FFC76DAE991}
+		{49E3F267-F4D7-4C94-8A8F-147AFBAAC382} = {1EACF63D-B45A-478A-8962-DFEE523F0FE4}
+		{AB32F2DB-D3DF-47DA-8300-0D356E0AF436} = {49E3F267-F4D7-4C94-8A8F-147AFBAAC382}
+		{B5D870EB-A2D8-4B3E-BD7C-4E873991D9FC} = {49E3F267-F4D7-4C94-8A8F-147AFBAAC382}
+		{F1008B5B-0DB3-4DC5-9ECD-996A99C74309} = {49E3F267-F4D7-4C94-8A8F-147AFBAAC382}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6D1E8361-6C10-497D-AF1C-BB09FFD6C6B0}

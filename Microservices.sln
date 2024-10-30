@@ -5,13 +5,21 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{B201CDA6-B949-446A-8CEE-D675E24FAF6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Order.API", "Example\Example.Order.API\Example.Order.API.csproj", "{AD6C3E31-8ECF-46BE-8AA2-88BBDEA4EB7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Order.API", "Example\Example.Order.API\Example.Order.API.csproj", "{AD6C3E31-8ECF-46BE-8AA2-88BBDEA4EB7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Shared", "Example\Example.Shared\Example.Shared.csproj", "{2E26FA8E-BFE4-4CF8-ACF4-039F8C794D51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Shared", "Example\Example.Shared\Example.Shared.csproj", "{2E26FA8E-BFE4-4CF8-ACF4-039F8C794D51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Stock.API", "Example\Example.Stock.API\Example.Stock.API.csproj", "{2828CD6B-4908-4B4E-86FA-CA70B33ED9E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Stock.API", "Example\Example.Stock.API\Example.Stock.API.csproj", "{2828CD6B-4908-4B4E-86FA-CA70B33ED9E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Payment.API", "Example\Example.Payment.API\Example.Payment.API.csproj", "{8590E24E-6861-4697-A8F1-D7F6B405D462}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Payment.API", "Example\Example.Payment.API\Example.Payment.API.csproj", "{8590E24E-6861-4697-A8F1-D7F6B405D462}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataSynchronization", "DataSynchronization", "{1EACF63D-B45A-478A-8962-DFEE523F0FE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIBased", "APIBased", "{5E607A32-D551-44C0-8999-1FFC76DAE991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSynchronization.APIBased.ServiceA", "DataSynchronization\APIBased\DataSynchronization.APIBased.ServiceA\DataSynchronization.APIBased.ServiceA.csproj", "{B0F9C2AA-6EC4-4E2C-8E2D-C4441F61AB2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSynchronization.APIBased.ServiceB", "DataSynchronization\APIBased\DataSynchronization.APIBased.ServiceB\DataSynchronization.APIBased.ServiceB.csproj", "{0232EFAF-8BA5-4EAE-B8DE-55BEC0EAB240}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +43,14 @@ Global
 		{8590E24E-6861-4697-A8F1-D7F6B405D462}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8590E24E-6861-4697-A8F1-D7F6B405D462}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8590E24E-6861-4697-A8F1-D7F6B405D462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F9C2AA-6EC4-4E2C-8E2D-C4441F61AB2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F9C2AA-6EC4-4E2C-8E2D-C4441F61AB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F9C2AA-6EC4-4E2C-8E2D-C4441F61AB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F9C2AA-6EC4-4E2C-8E2D-C4441F61AB2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0232EFAF-8BA5-4EAE-B8DE-55BEC0EAB240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0232EFAF-8BA5-4EAE-B8DE-55BEC0EAB240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0232EFAF-8BA5-4EAE-B8DE-55BEC0EAB240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0232EFAF-8BA5-4EAE-B8DE-55BEC0EAB240}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +60,9 @@ Global
 		{2E26FA8E-BFE4-4CF8-ACF4-039F8C794D51} = {B201CDA6-B949-446A-8CEE-D675E24FAF6C}
 		{2828CD6B-4908-4B4E-86FA-CA70B33ED9E3} = {B201CDA6-B949-446A-8CEE-D675E24FAF6C}
 		{8590E24E-6861-4697-A8F1-D7F6B405D462} = {B201CDA6-B949-446A-8CEE-D675E24FAF6C}
+		{5E607A32-D551-44C0-8999-1FFC76DAE991} = {1EACF63D-B45A-478A-8962-DFEE523F0FE4}
+		{B0F9C2AA-6EC4-4E2C-8E2D-C4441F61AB2B} = {5E607A32-D551-44C0-8999-1FFC76DAE991}
+		{0232EFAF-8BA5-4EAE-B8DE-55BEC0EAB240} = {5E607A32-D551-44C0-8999-1FFC76DAE991}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6D1E8361-6C10-497D-AF1C-BB09FFD6C6B0}

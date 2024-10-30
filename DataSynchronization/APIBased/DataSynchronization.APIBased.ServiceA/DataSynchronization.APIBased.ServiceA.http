@@ -1,0 +1,6 @@
+@DataSynchronization.APIBased.ServiceA_HostAddress = http://localhost:5073
+
+GET {{DataSynchronization.APIBased.ServiceA_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

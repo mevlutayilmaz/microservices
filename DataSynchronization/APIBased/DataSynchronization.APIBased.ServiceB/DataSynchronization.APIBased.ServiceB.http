@@ -1,6 +1,0 @@
-@DataSynchronization.APIBased.ServiceB_HostAddress = http://localhost:5199
-
-GET {{DataSynchronization.APIBased.ServiceB_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
